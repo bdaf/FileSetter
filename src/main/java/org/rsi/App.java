@@ -1,17 +1,16 @@
 package org.rsi;
 
-import java.io.File;
 
 public class App
 {
     public static void main( String[] args ) {
-        File folder = new File(args[0]);
+        DirectoryCreator dirCreator = new DirectoryCreator(args[0]);
+        dirCreator.createHOMEDirectory();
+        dirCreator.createDEVDirectory();
+        dirCreator.createTESTDirectory();
 
-        String[] files = folder.list();
+        for(;;) {
 
-        for (String file : files)
-        {
-            System.out.println(file);
         }
     }
 }
